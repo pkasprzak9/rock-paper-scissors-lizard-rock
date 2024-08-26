@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./styles/css/style.css">
+  <title>Rock Paper Scissors Lizard Spock</title>
+</head>
+<body>
+  <header>Rock Paper Scissors Lizard Spock</header>
+  <main>
+    <div class="screen screen--active screen--start">
+      <h1 id="start__button">
+        Start a new game!
+      </h1>
+    </div>
+    <div class="screen screen--game">
+      <h2>Choose your weapon!</h2>
+      <div class="game__weapons">
+        <div class="game__weapon" data-weapon="rock">
+          <img src="./assets/images/rock.webp" alt="Rock">
+          <p>Rock</p>
+        </div>
+        <div class="game__weapon" data-weapon="paper">
+          <img src="./assets/images/paper.webp" alt="Paper">
+          <p>Paper</p>
+        </div>
+        <div class="game__weapon" data-weapon="scissors">
+          <img src="./assets/images/scissors.webp" alt="Scissors">
+          <p>Scissors</p>
+        </div>
+        <div class="game__weapon" data-weapon="lizard">
+          <img src="./assets/images/lizard.webp" alt="Lizard">
+          <p>Lizard</p>
+        </div>
+        <div class="game__weapon" data-weapon="spock">
+          <img src="./assets/images/spock.webp" alt="Spock">
+          <p>Spock</p>
+        </div>
+      </div>
+    </div>
+    <div class="screen screen--results">
+      <h2>Results</h2>
+      <div class="results__players">
+        <div class="results__player">
+          <h3>You Choose: <span id="player__choice"></span></h3>
+        </div>
+        <div class="results__player">
+          <h3>Computer Choose: <span id="computer__choice"></span></h3>
+        </div>
+      </div>
+      <div class="results__winner">
+        <p id="winner__rule"></p>
+        <h3 id="winner__message"></h3>
+      </div>
+      <button class="btn btn--play-again">Play Again</button>
+    </div>
+  </main>
+  <script type="module" src="./main.js"></script>
+</body>
+</html>
