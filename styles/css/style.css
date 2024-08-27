@@ -315,6 +315,7 @@ body {
   line-height: 1.5;
   background-color: black;
   color: whitesmoke;
+  box-sizing: border-box;
 }
 
 .btn {
@@ -345,14 +346,15 @@ header {
 }
 @media (max-width: 768px) {
   header {
-    font-size: 1.5rem;
+    font-size: 1rem;
   }
 }
 
 .screen {
   position: absolute;
-  top: calc(2em + 1.8rem);
+  top: 0;
   left: 0;
+  margin-top: calc(2em + 1.8rem);
   height: calc(100% - 2em - 1.8rem);
   width: 100%;
   opacity: 0;
@@ -362,10 +364,20 @@ header {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  text-align: center;
 }
 .screen--active {
   opacity: 1;
   visibility: visible;
+}
+@media (max-width: 768px) {
+  .screen {
+    margin-top: 3em;
+    height: 100%;
+    justify-content: flex-start;
+    width: 90%;
+    left: 5%;
+  }
 }
 
 .screen--start h1 {
@@ -377,6 +389,12 @@ header {
 }
 .screen--start h1:hover {
   color: yellow;
+}
+@media (max-width: 768px) {
+  .screen--start {
+    margin-top: 0;
+    justify-content: center;
+  }
 }
 
 .screen--game h2 {
@@ -417,8 +435,8 @@ header {
 }
 @media (max-width: 768px) {
   .screen--game .game__weapons .game__weapon img {
-    width: 175px;
-    height: 175px;
+    width: 150px;
+    height: 150px;
   }
 }
 .screen--game .game__weapons .game__weapon:hover {
@@ -432,11 +450,6 @@ header {
   border: 2px solid yellow;
   box-shadow: 0 0 0.5em yellow;
 }
-@media (max-width: 768px) {
-  .screen--game {
-    top: calc(2em + 1.5rem + 5em);
-  }
-}
 
 .screen--results h2 {
   font-size: 2.5rem;
@@ -448,16 +461,39 @@ header {
   text-align: center;
   margin-bottom: 1em;
 }
-.screen--results span {
+.screen--results .results__players .results__player span {
   color: yellow;
   text-transform: uppercase;
 }
+@media (max-width: 768px) {
+  .screen--results .results__players {
+    font-size: 2rem;
+    margin: 0;
+  }
+  .screen--results .results__players h3 {
+    margin: 0;
+  }
+}
 .screen--results .results__winner {
+  margin-top: 1em;
   font-size: 2.5rem;
   text-transform: uppercase;
   margin-bottom: 1em;
   text-align: center;
 }
 .screen--results .results__winner #winner__message {
+  margin-top: 0;
   color: yellow;
+}
+@media (max-width: 768px) {
+  .screen--results .results__winner #winner__rule {
+    font-size: 2rem;
+    margin: 0;
+  }
+}
+@media (max-width: 768px) {
+  .screen--results {
+    width: 80%;
+    left: 10%;
+  }
 }/*# sourceMappingURL=style.css.map */

@@ -12,6 +12,7 @@ body {
   line-height: 1.5;
   background-color: black;
   color: whitesmoke;
+  box-sizing: border-box;
 }
 
 // BUTTON STYLES
@@ -44,14 +45,15 @@ header {
   padding: 1em 0;
 
   @media (max-width: 768px) {
-    font-size: 1.5rem;
+    font-size: 1rem;
   }
 }
 
 .screen {
   position: absolute;
-  top: calc(2em + 1.8rem);
+  top: 0;
   left: 0;
+  margin-top: calc(2em + 1.8rem);
   height: calc(100% - 2em - 1.8rem);
   width: 100%;
   opacity: 0;
@@ -61,10 +63,19 @@ header {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  text-align: center;
 
   &--active {
     opacity: 1;
     visibility: visible;
+  }
+
+  @media (max-width: 768px) {
+    margin-top: 3em;
+    height: 100%;
+    justify-content: flex-start;
+    width: 90%;
+    left: 5%;
   }
 }
 
@@ -79,6 +90,11 @@ header {
     &:hover {
       color: $accent-color;
     }
+  }
+
+  @media (max-width: 768px) {
+    margin-top: 0;
+    justify-content: center;
   }
 }
 
@@ -121,8 +137,8 @@ header {
         border-radius: .5em;
 
         @media (max-width: 768px) {
-          width: 175px;
-          height: 175px;
+          width: 150px;
+          height: 150px;
         }
       }
     }
@@ -141,10 +157,6 @@ header {
       }
     }
   }
-
-  @media (max-width: 768px) {
-    top: calc(2em + 1.5rem + 5em);
-  }
 }
 
 .screen--results {
@@ -158,21 +170,48 @@ header {
     font-size: 2.5rem;;
     text-align: center;
     margin-bottom: 1em;
+
+    .results__player {
+      span {
+        color: $accent-color;
+        text-transform: uppercase;
+      }
+    }
+
+    @media (max-width: 768px) {
+      font-size: 2rem;
+      margin: 0;
+
+      h3 {
+        margin: 0;
+      }
+    }
   }
 
-  span {
-    color: $accent-color;
-    text-transform: uppercase;
-  }
 
   .results__winner {
+    margin-top: 1em;
     font-size: 2.5rem;
     text-transform: uppercase;
     margin-bottom: 1em;
     text-align: center;
 
     #winner__message {
+      margin-top: 0;
       color: $accent-color;
     }
+
+    @media (max-width: 768px) {
+
+      #winner__rule {
+        font-size: 2rem;
+        margin: 0;
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    width: 80%;
+    left: 10%;
   }
 }

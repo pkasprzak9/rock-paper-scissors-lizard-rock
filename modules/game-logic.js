@@ -26,7 +26,7 @@ function getResult(playerSelection, computerSelection) {
     case 'rock':
       switch (computerSelection) {
         case 'rock':
-          winnerRule = 'draw';
+          winnerRule = '';
           winnerMessage = drawMessage;
           break;
         case 'paper':
@@ -54,7 +54,7 @@ function getResult(playerSelection, computerSelection) {
           winnerMessage = winMessage;
           break;
         case 'paper':
-          winnerRule = 'draw';
+          winnerRule = '';
           winnerMessage = drawMessage;
           break;
         case 'scissors':
@@ -82,7 +82,7 @@ function getResult(playerSelection, computerSelection) {
           winnerMessage = winMessage;
           break;
         case 'scissors':
-          winnerRule = 'draw';
+          winnerRule = '';
           winnerMessage = drawMessage;
           break;
         case 'lizard':
@@ -110,7 +110,7 @@ function getResult(playerSelection, computerSelection) {
           winnerMessage = loseMessage;
           break;
         case 'lizard':
-          winnerRule = 'draw';
+          winnerRule = '';
           winnerMessage = drawMessage;
           break;
         case 'spock':
@@ -138,7 +138,7 @@ function getResult(playerSelection, computerSelection) {
           winnerMessage = loseMessage;
           break;
         case 'spock':
-          winnerRule = 'draw';
+          winnerRule = '';
           winnerMessage = drawMessage;
           break;
       }
