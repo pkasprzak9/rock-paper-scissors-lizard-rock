@@ -5,7 +5,6 @@
  * 1. Correct the line height in all browsers.
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
-@import url("https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap");
 html {
   line-height: 1.15; /* 1 */
   -webkit-text-size-adjust: 100%; /* 2 */
@@ -308,6 +307,11 @@ template {
   display: none;
 }
 
+@font-face {
+  font-family: "Pixelify Sans";
+  src: url(../../assets/fonts/Pixelify_Sans/PixelifySans-VariableFont_wght.ttf);
+  font-weight: 400 700;
+}
 body {
   font-family: "Pixelify Sans", sans-serif;
   font-size: 16px;
